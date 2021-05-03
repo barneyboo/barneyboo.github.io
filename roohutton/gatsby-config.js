@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`IBM+Plex+Sans\:400,700`, `Lexend\:800`],
+        fonts: [`IBM+Plex+Sans\:400,700`, `Lexend\:800,900`],
         display: "swap",
       },
     },

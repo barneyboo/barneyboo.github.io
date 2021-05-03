@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: #171717;
     color: #fff;
     font-family: "IBM Plex Sans";
+    margin: 0;
   }
 `
 

@@ -1,5 +1,11 @@
 import React from "react"
 
-const MainContent = () => <p>main content block</p>
+import ContentSection from "./ContentSection"
+
+const MainContent = () => (
+  <div>
+    <ContentSection section="work"></ContentSection>
+  </div>
+)
 
 export default MainContent
