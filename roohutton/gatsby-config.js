@@ -5,8 +5,19 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `roohutton.com`,
+    contentWidth: "1000px",
+  },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-fonts`,

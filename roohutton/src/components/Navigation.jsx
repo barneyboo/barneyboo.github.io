@@ -12,7 +12,7 @@ const NameHeader = styled.h1`
   font-weight: 800;
   font-family: "Lexend";
   display: inline-block;
-  position: absolute;
+  position: relative;
   left: 0;
   margin: 0;
 `
