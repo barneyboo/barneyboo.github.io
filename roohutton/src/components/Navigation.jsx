@@ -2,7 +2,9 @@ import React, { useState } from "react"
 import styled, { keyframes } from "styled-components"
 
 const CenteredNavigation = styled.div`
-  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
 `
 
 const NameHeader = styled.h1`
@@ -10,7 +12,9 @@ const NameHeader = styled.h1`
   font-weight: 800;
   font-family: "Lexend";
   display: inline-block;
-  position: relative;
+  position: absolute;
+  left: 0;
+  margin: 0;
 `
 
 const NameHeaderSurname = styled.span`
@@ -27,6 +31,28 @@ let HeaderUnderlineSlide = keyframes`
     width: ${Math.random() * 100}%;
     left: ${Math.random() * 100}%;
   }
+`
+
+const NavTopicsList = styled.ul`
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Lexend";
+  position: absolute;
+  right: 0;
+  margin: 0;
+`
+
+const topicColors = {
+  work: "#cb14d6",
+  projects: "#94d614",
+  research: "#14a2d6",
+}
+
+const NavTopic = styled.li`
+  display: inline-block;
+  color: ${props => topicColors[props.topic]};
+  margin-right: 20px;
 `
 
 const refreshSlideAnimation = () => keyframes`
@@ -83,7 +109,7 @@ const getNewHeaderUnderline = () => styled.div`
   background-color: ${props => props.color};
   position: absolute;
   transform: translate3d(0, 0, 0);
-
+  z-index: ${Math.floor(Math.random() * 100)};
   animation: ${refreshSlideAnimation()} ${Math.random() * 70 + 20}s ease-in-out
     alternate-reverse infinite;
 `
@@ -106,6 +132,12 @@ const Navigation = () => {
         <HeaderUnderline color="#94d614" />
         <HeaderUnderline3 color="#14a2d6" />
       </NameHeader>
+
+      <NavTopicsList>
+        <NavTopic topic="work">work</NavTopic>
+        <NavTopic topic="projects">projects</NavTopic>
+        <NavTopic topic="research">research</NavTopic>
+      </NavTopicsList>
     </CenteredNavigation>
   )
 }
