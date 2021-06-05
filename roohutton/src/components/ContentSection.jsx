@@ -54,6 +54,29 @@ const ItemContent = styled.div`
   position: relative;
 `
 
+const SkipToNextSection = styled.p`
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1rem;
+
+  &:before {
+    content: "> ";
+  }
+`
+const SkipSectionName = styled.span`
+  font-weight: 600;
+`
+
+/** Projects */
+const ProjectBlock = styled.div``
+
+const ProjectTitle = styled.h1`
+  display: inline-block;
+  background-color: #b80000;
+  padding: 0;
+`
+
 const ContentSection = section => (
   <SectionWrapper>
     <SectionHeading>work</SectionHeading>
@@ -62,6 +85,10 @@ const ContentSection = section => (
         <SectionGroupHeadingContent>
           <GroupLogo src="" alt="BBC News Labs" />
           <GroupDate>2017 -</GroupDate>
+          <SkipToNextSection>
+            Skip to <br />
+            <SkipSectionName>Open University</SkipSectionName>
+          </SkipToNextSection>
         </SectionGroupHeadingContent>
       </SectionGroupHeading>
 
@@ -73,6 +100,36 @@ const ContentSection = section => (
             and trial new formats to reach underserved audiences. Here are some
             of the things I’ve worked on.
           </ItemDescription>
+
+          <ProjectBlock>
+            <ProjectTitle>Editorially curated personalisation</ProjectTitle>
+            <ProjectYear>2021</ProjectYear>
+            <ProjectContent>
+              <ProjectContentLeadPar>
+                A lot of online platforms and websites are using machine
+                learning recommendations to create personalised experiences.
+                This project takes a completely different approach by testing if
+                we can create a better audience experience by putting editors in
+                control of personalisation?
+              </ProjectContentLeadPar>
+              <p>
+                A lot of online platforms and websites are using machine
+                learning recommendations to create personalised experiences.
+                This project takes a completely different approach by testing if
+                we can create a better audience experience by putting editors in
+                control of personalisation?
+              </p>
+            </ProjectContent>
+            <ProjectMedia>
+              YT https://www.youtube.com/watch?v=JdAJJokYeFA
+            </ProjectMedia>
+            <ProjectReadMore>
+              <ReadMoreHeading>Read more</ReadMoreHeading>
+              <ReadMoreLink href="https://bbcnewslabs.co.uk">
+                bbcnewslabs.co.uk {">"}
+              </ReadMoreLink>
+            </ProjectReadMore>
+          </ProjectBlock>
         </ItemContent>
       </ItemContentWrapper>
     </SectionItem>
