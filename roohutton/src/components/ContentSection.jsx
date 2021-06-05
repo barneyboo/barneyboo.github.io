@@ -69,12 +69,60 @@ const SkipSectionName = styled.span`
 `
 
 /** Projects */
-const ProjectBlock = styled.div``
+const ProjectBlock = styled.div`
+  display: grid;
+  grid-template-columns: 2rem auto 0.3fr;
+  grid-template-rows: auto auto auto auto;
+  border-top: 2px solid #b80000;
+`
 
 const ProjectTitle = styled.h1`
   display: inline-block;
   background-color: #b80000;
   padding: 0;
+  margin: 0;
+  grid-row: 1;
+  grid-column: 1/2;
+`
+
+const ProjectYear = styled.h2`
+  display: inline-block;
+  background-color: #202020;
+  margin: 0;
+  grid-row: 2;
+  grid-column: 2;
+`
+
+const ProjectContent = styled.div`
+  grid-row: 2/3;
+  grid-column: 2;
+`
+
+const ProjectContentLeadPar = styled.p`
+  font-weight: 600;
+`
+
+const ProjectMedia = styled.div`
+  width: 100%;
+  height: 100%;
+  border-right: 2px solid #b80000;
+  grid-row: 2/2;
+  grid-column: 3;
+`
+const ProjectReadMore = styled.div`
+  grid-row: 4/1;
+  grid-column: 3;
+  background-color: #b80000;
+`
+
+const ReadMoreHeading = styled.h3`
+  text-transform: uppercase;
+`
+
+const ReadMoreLink = styled.p`
+  &:after {
+    content: " >";
+  }
 `
 
 const ContentSection = section => (
@@ -126,7 +174,7 @@ const ContentSection = section => (
             <ProjectReadMore>
               <ReadMoreHeading>Read more</ReadMoreHeading>
               <ReadMoreLink href="https://bbcnewslabs.co.uk">
-                bbcnewslabs.co.uk {">"}
+                bbcnewslabs.co.uk
               </ReadMoreLink>
             </ProjectReadMore>
           </ProjectBlock>
