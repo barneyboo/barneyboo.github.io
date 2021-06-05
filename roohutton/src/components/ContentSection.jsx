@@ -19,7 +19,6 @@ const SectionItem = styled.div``
 const SectionGroupHeading = styled.div`
   width: 100%;
   background-color: #b80000;
-  min-height: 100px;
 `
 
 const SectionGroupHeadingContent = styled.div`
@@ -34,6 +33,7 @@ const GroupLogo = styled.img``
 
 const GroupDate = styled.p`
   margin: 0;
+  font-size: 1.2rem;
 `
 const ItemDescription = styled.p`
   margin: 0;
@@ -73,7 +73,7 @@ const ProjectBlock = styled.div`
   display: grid;
   grid-template-columns: 6rem auto 0.3fr;
   grid-template-rows: auto auto auto auto;
-  border-top: 2px solid #b80000;
+  border-top: 4px solid #b80000;
   position: relative;
 
   p {
@@ -131,7 +131,8 @@ const ProjectMedia = styled.div`
 `
 const ProjectReadMore = styled.div`
   background-color: #b80000;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem 0.2rem 0.8rem;
+  margin-top: 0.5rem;
 `
 
 const ReadMoreHeading = styled.h3`
