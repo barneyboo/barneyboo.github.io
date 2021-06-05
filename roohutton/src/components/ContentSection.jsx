@@ -39,8 +39,8 @@ const ItemDescription = styled.p`
   margin: 0;
   font-size: 1.2rem;
   padding: 1rem;
-  font-weight: 500;
-  line-height: 1.7rem;
+  font-weight: 400;
+  line-height: 1.8rem;
 `
 
 const ItemContentWrapper = styled.div`
@@ -71,18 +71,28 @@ const SkipSectionName = styled.span`
 /** Projects */
 const ProjectBlock = styled.div`
   display: grid;
-  grid-template-columns: 2rem auto 0.3fr;
+  grid-template-columns: 6rem auto 0.3fr;
   grid-template-rows: auto auto auto auto;
   border-top: 2px solid #b80000;
+  position: relative;
+
+  p {
+    line-height: 1.4rem;
+  }
+`
+
+const ProjectTitleWrapper = styled.div`
+  grid-row: 1;
+  grid-column: 1 / span 2;
 `
 
 const ProjectTitle = styled.h1`
   display: inline-block;
   background-color: #b80000;
-  padding: 0;
+  font-weight: 500;
+  font-size: 2.2rem;
+  padding: 0.2rem 0.4rem;
   margin: 0;
-  grid-row: 1;
-  grid-column: 1/2;
 `
 
 const ProjectYear = styled.h2`
@@ -90,7 +100,13 @@ const ProjectYear = styled.h2`
   background-color: #202020;
   margin: 0;
   grid-row: 2;
-  grid-column: 2;
+  grid-column: 1;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.3rem;
+  padding: 0.2rem 0.4rem;
 `
 
 const ProjectContent = styled.div`
@@ -100,26 +116,33 @@ const ProjectContent = styled.div`
 
 const ProjectContentLeadPar = styled.p`
   font-weight: 600;
+  margin-top: 0.5rem;
 `
 
 const ProjectMedia = styled.div`
   width: 100%;
   height: 100%;
-  border-right: 2px solid #b80000;
-  grid-row: 2/2;
+  grid-row: 1 / span 3;
   grid-column: 3;
+
+  & iframe {
+    border-right: 4px solid #b80000;
+  }
 `
 const ProjectReadMore = styled.div`
-  grid-row: 4/1;
-  grid-column: 3;
   background-color: #b80000;
+  padding: 0.5rem 1rem;
 `
 
 const ReadMoreHeading = styled.h3`
   text-transform: uppercase;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
 `
 
 const ReadMoreLink = styled.p`
+  margin: 0.5rem 0;
   &:after {
     content: " >";
   }
@@ -150,7 +173,9 @@ const ContentSection = section => (
           </ItemDescription>
 
           <ProjectBlock>
-            <ProjectTitle>Editorially curated personalisation</ProjectTitle>
+            <ProjectTitleWrapper>
+              <ProjectTitle>Editorially curated personalisation</ProjectTitle>
+            </ProjectTitleWrapper>
             <ProjectYear>2021</ProjectYear>
             <ProjectContent>
               <ProjectContentLeadPar>
@@ -169,14 +194,22 @@ const ContentSection = section => (
               </p>
             </ProjectContent>
             <ProjectMedia>
-              YT https://www.youtube.com/watch?v=JdAJJokYeFA
+              <iframe
+                width="320"
+                height="180"
+                src="https://www.youtube.com/embed/JdAJJokYeFA"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <ProjectReadMore>
+                <ReadMoreHeading>Read more</ReadMoreHeading>
+                <ReadMoreLink href="https://bbcnewslabs.co.uk">
+                  bbcnewslabs.co.uk
+                </ReadMoreLink>
+              </ProjectReadMore>
             </ProjectMedia>
-            <ProjectReadMore>
-              <ReadMoreHeading>Read more</ReadMoreHeading>
-              <ReadMoreLink href="https://bbcnewslabs.co.uk">
-                bbcnewslabs.co.uk
-              </ReadMoreLink>
-            </ProjectReadMore>
           </ProjectBlock>
         </ItemContent>
       </ItemContentWrapper>
