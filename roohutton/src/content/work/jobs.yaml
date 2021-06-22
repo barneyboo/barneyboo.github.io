@@ -1,0 +1,7 @@
+# Each job here is rendered as a distinct block - its id is how individual projects can reference it to be placed correctly
+
+title: BBC News Labs
+years: 2017 -
+id: newslabs
+color: #bb8800
+logo: ?

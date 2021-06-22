@@ -91,7 +91,7 @@ const ProjectTitle = styled.h1`
   background-color: #b80000;
   font-weight: 500;
   font-size: 2.2rem;
-  padding: 0.2rem 0.4rem;
+  padding: 0 0.4rem 0.2rem 0.4rem;
   margin: 0;
 `
 
